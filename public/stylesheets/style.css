@@ -2,3 +2,9 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+* {
+  font-family: 'Roboto Mono', monospace;
+}
+li {
+  font-size: medium;
+}
