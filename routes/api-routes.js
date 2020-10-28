@@ -46,4 +46,14 @@ module.exports = function(app) {
       });
     }
   });
+
+  app.get("/api/presetorders", function(req, res){
+    db.Orders.findAll({
+      where: {
+        saveById: null
+      }
+    }).then(function(preOrders){
+      res.json(preOrders);
+    });
+  });
 };
