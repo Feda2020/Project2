@@ -29,7 +29,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
 
-  app.get("/order", function(req,res){
+  app.get("/order", isAuthenticated, function(req,res){
     db.Order.findAll({}).then(function(orders){
       res.render("orders", {
         orders: orders
