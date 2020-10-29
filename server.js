@@ -18,7 +18,14 @@ const exphbs = require("express-handlebars");
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
-app.engine("handlebars", exphbs({defaultLayout: "main"}));
+app.engine("handlebars", exphbs({
+  defaultLayout: "main",
+  runtimeOptions: {
+    allowProtoPropertiesByDefault: true,
+    allowProtoMethodsByDefault: true
+  }
+})
+);
 app.set("view engine", "handlebars");
 
 //app.use(routes);
