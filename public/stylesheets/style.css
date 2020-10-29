@@ -52,3 +52,13 @@ form.login {
 .card{
   float: left;
 }
+.btn-link {
+  margin: 15px;
+  background-color: #E9E41E;
+}
+a {
+  color: #141414;
+}
+a:hover {
+  color: #6F6BBE;
+}
