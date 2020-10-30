@@ -36,4 +36,24 @@ module.exports = function(app) {
       });
     });
   });
+
+  //These are left as comments until the tables are created
+
+  // app.get("/favorites", isAuthenticated, function(req,res){
+  //   db.Favorites.findAll({}).then(function(){
+  //     res.render("favorites");
+  //   });
+  // });
+
+  // app.get("/reviews", isAuthenticated, function(req,res){
+  //   db.Reviews.findAll({}).then(function(){
+  //     res.render("reviews");
+  //   });
+  // });
+
+  // app.get("/checkout", isAuthenticated, function(req,res){
+  //   db.Checkout.findAll({}).then(function(){
+  //     res.render("checkout");
+  //   });
+  // });
 };
