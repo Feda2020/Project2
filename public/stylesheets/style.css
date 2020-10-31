@@ -87,3 +87,11 @@ body {
   float: left;
   margin: 1rem
 }
+
+.add-pizza {
+  color: black;
+}
+
+.add-pizza:hover {
+  cursor: pointer;
+}

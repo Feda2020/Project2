@@ -11,7 +11,7 @@ $(document).ready(function() {
     for(var i =0; i < arr.length; i++){
       let button = $("<button>");
       button.attr("type", "button");
-      button.attr("class", "btn btn-" + str + " btn-sm");
+      button.attr("class", "btn btn-" + str + " btn-sm choice");
       button.text(arr[i]);
 
       group.append(button);
@@ -22,7 +22,7 @@ $(document).ready(function() {
   buttonFunc(veggieToppings, vegButtons, "success");
   buttonFunc(extraCheese, cheeseButtons, "warning");
 
-  $("button").on("click", function(){
+  $(".choice").on("click", function(){
     let newTop = $(this).text();
     console.log(newTop);
 
@@ -34,4 +34,9 @@ $(document).ready(function() {
       $(".topThree").text(newTop);
     }
   });
+
+  $(".add-pizza").on("click", function() {
+    $("#checkOutModal").modal("show");
+  });
+
 });
