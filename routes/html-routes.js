@@ -51,8 +51,6 @@ module.exports = function(app) {
   // });
 
   // app.get("/checkout", isAuthenticated, function(req,res){
-  //   db.Checkout.findAll({}).then(function(){
-  //     res.render("checkout");
-  //   });
+  //   res.render("checkout");
   // });
 };
