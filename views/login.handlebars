@@ -28,27 +28,30 @@
   </div>
   <!-- Pizza Promo and Login Form -->
   <div class="container">
-    {{#each orders}}
-        <div class="card pizzaCard cardFloat" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">{{{pizzaName}}}</h5>
-                <p class="card-text">{{{toppingOne}}}</p>
-                <p class="card-text">{{{toppingTwo}}}</p>
-                <p class="card-text">{{{toppingThree}}}</p>
-                <a href="#" class="card-link">Claw this pie!</a>
-            </div>
-        </div>
-    {{/each}}
-
-    <div class="card pizzaCard cardFloat" style="width: 18rem;">
-        <div class="card-body">
-            <h5 class="card-title">Claw Your Own</h5>
-            <p class="card-text">Make your own pie with up to 3 ingredients!</p>
-            <a href="#" class="card-link createOwn">Claw my own!</a>
-        </div>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 promo">
+        <img src="img/pizzadeal.jpg" class="deal-image" alt="pepperoni pizza">
+        <h2 class="promo-text">$10 PEPPERONI PIZZA DEAL!</h2>
+      </div>
+      <div class="col-md-6 col-md-offset-3 form">
+        <h2>Login Form</h2>
+        <form class="login">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="email-input" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="password-input" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-default">Login</button>
+        </form>
+        <br />
+        <p>Or sign up <a href="/">here</a></p>
+      </div>
     </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/orders.js"></script>
+  <script type="text/javascript" src="js/login.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
