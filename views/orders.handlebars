@@ -32,10 +32,10 @@
         <div class="card pizzaCard cardFloat" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">{{{pizzaName}}}</h5>
-                <p class="card-text">{{{toppingOne}}}</p>
-                <p class="card-text">{{{toppingTwo}}}</p>
-                <p class="card-text">{{{toppingThree}}}</p>
-                <a href="#" class="card-link">Claw this pie!</a>
+                <p class="card-text topOne">{{{toppingOne}}}</p>
+                <p class="card-text topTwo">{{{toppingTwo}}}</p>
+                <p class="card-text topThree">{{{toppingThree}}}</p>
+                <p class="card-link add-pizza">Claw this pie!</p>
             </div>
         </div>
     {{/each}}
@@ -48,6 +48,36 @@
         </div>
     </div>
   </div>
+
+  <div class="modal fade" id="checkOutModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Checkout</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <h6 class="pizza-name"></h6>
+          <p class="one"></p>
+          <p class="two"></p>
+          <p class="three"></p>
+        </div>
+        <div>
+          <p>Your order will be ready in 15 - 20 minutes.</p>
+        </div>
+      </div>
+      <div>
+        <p>Your order will be ready in 15 - 20 minutes.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Submit Order</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/orders.js"></script>
