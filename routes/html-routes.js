@@ -58,9 +58,9 @@ module.exports = function(app) {
   //   });
   // });
 
-  // app.get("/checkout", isAuthenticated, function(req,res){
-  //   db.Checkout.findAll({}).then(function(){
-  //     res.render("checkout");
-  //   });
-  // });
+  app.get("/checkout", isAuthenticated, function(req,res){
+    db.Order.findAll({}).then(function(){
+      res.render("checkout");
+    });
+  });
 };

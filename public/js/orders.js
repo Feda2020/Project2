@@ -28,7 +28,7 @@ $(document).ready(function() {
         saveById: userId
       };
       $.post("/api/orders", newOrder, function(){
-        window.location.replace("/");
+        window.location.replace("/checkout");
       });
     });
 
