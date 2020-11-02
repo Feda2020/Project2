@@ -56,9 +56,29 @@ module.exports = function(app) {
       res.json(preOrders);
     });
   });
-  app.post("/api/orders", function(req, res){
-    db.Order.create(req.body).then(function(dbOrders){
-      res.json(dbOrders);
+
+  //FAVORITES
+  // app.get("/api/presetorders", function(req, res){
+  //   db.Order.findAll({
+  //     where: {
+  //       favorites: true
+  //     }
+  //   }).then(function(favOrders){
+  //     res.json(favOrders);
+  //   });
+  // });
+
+  //CHECKOUT
+  app.get("/api/presetorders", function(req, res){
+    db.Order.findAll({
+      attributes: [
+        sequelize.fn("MAX", sequelize.col("id"))
+     ],
+     where: {
+       saveById: req.users.id
+     }
+    }).then(function(newOrders){
+      res.json(newOrders);
     });
   });
 };
