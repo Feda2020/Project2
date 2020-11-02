@@ -59,7 +59,14 @@ module.exports = function(app) {
   // });
 
   app.get("/checkout", isAuthenticated, function(req,res){
-    db.Order.findAll({}).then(function(){
+    db.Order.findAll({
+      attributes: [
+        sequelize.fn("MAX", sequelize.col("id"))
+     ],
+     where: {
+       saveById: req.users.id
+     }
+    }).then(function(){
       res.render("checkout");
     });
   });

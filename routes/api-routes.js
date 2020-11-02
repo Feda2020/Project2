@@ -81,5 +81,10 @@ module.exports = function(app) {
       res.json(newOrders);
     });
   });
+  app.post("/api/orders", function(req,res){
+    db.Order.create().then(function(dbOrders){
+      res.json(dbOrders);
+    })
+  })
 };
 
