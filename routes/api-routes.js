@@ -48,7 +48,7 @@ module.exports = function(app) {
   });
 
   app.get("/api/presetorders", function(req, res){
-    db.Orders.findAll({
+    db.Order.findAll({
       where: {
         saveById: null
       }
@@ -81,4 +81,10 @@ module.exports = function(app) {
       res.json(newOrders);
     });
   });
+  app.post("/api/orders", function(req,res){
+    db.Order.create(req.body).then(function(dbOrders){
+      res.json(dbOrders);
+    });
+  });
 };
+
