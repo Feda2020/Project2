@@ -50,29 +50,34 @@
     </div>
   </div>
 
-<div class="modal fade" id="checkOutModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Checkout</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div>
-          <h5>Order Details</h5>
+  <div class="modal fade" id="checkOutModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Checkout</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-        <div>
-          <p>Your order will be ready in 15 - 20 minutes.</p>
+        <div class="modal-body">
+          <div class="pizza">
+            <h6 class="pizza-name"></h6>
+            <ul>
+              <li class="one"></li>
+              <li class="two"></li>
+              <li class="three"></li>
+            </ul>
+          </div>
+          <div>
+            <p class="total-amount">Your total is $10.80</p>
+          </div>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Submit Order</button>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary submit-order">Submit Order</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/createOrder.js"></script>

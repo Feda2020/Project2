@@ -1,4 +1,4 @@
-body {
+  body {
     background-color: #6F6BBE;
   }
   
@@ -29,7 +29,6 @@ body {
     height: 400px;
     width: 100%;
     margin-bottom: 10px;
-  
   }
   
   .promo-text {
@@ -94,4 +93,20 @@ body {
 
 .add-pizza:hover {
   cursor: pointer;
+}
+
+.modal-body {
+  background-color: black;
+  color: white;
+}
+
+.modal-content {
+  background-color: #6324c7;
+  border-style: solid;
+  border-width: thick;
+  border-color: #E9E41E;
+}
+
+.modal-title {
+  color: white;
 }
