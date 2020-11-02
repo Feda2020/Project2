@@ -14,4 +14,23 @@ $(document).ready(function() {
     $(".two").text(secondTop);
     $(".three").text(thirdTop);
   });
+
+  $(".submitOrder").on("click", function(event){
+    event.preventDefault();
+    //let userId;
+    $.get("/api/user_data").then(function(data) {
+      let userId = data.id;
+      let newOrder = {
+        pizzaName: $(".pizza-name").text(),
+        toppingOne: $(".one").text(),
+        toppingTwo: $(".two").text(),
+        toppingThree: $(".three").text(),
+        saveById: userId
+      };
+      $.post("/api/orders", newOrder, function(){
+        window.location.replace("/");
+      });
+    });
+
+  });
 });
