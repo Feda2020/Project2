@@ -1,0 +1,50 @@
+  <div class="fixed-top">
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="p-4 menu">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="signup.html">Sign </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Log In</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="favorites.html">Previous Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reviews.html">Reviews</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <nav class="navbar navbar-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="logo-image">
+        <img src="img/logo.png" class="img-fluid" alt="restaurant logo">
+      </div>
+    </nav>
+  </div>
+  <!-- Pizza Promo and Login Form -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 form">
+        {{#each orders}}
+            <div class="card pizzaCard cardFloat" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{{pizzaName}}}</h5>
+                    <p class="card-text topOne">{{{toppingOne}}}</p>
+                    <p class="card-text topTwo">{{{toppingTwo}}}</p>
+                    <p class="card-text topThree">{{{toppingThree}}}</p>
+                    <h5>Your order ID is {{{id}}}</h5>
+                </div>
+            </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/reviewOrder.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
