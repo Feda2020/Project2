@@ -1,16 +1,20 @@
 body {
-    background-color: #6F6BBE;
+    background-color: black;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    text-shadow: 0 0 20px #6F6BBE;
   }
   
   .navbar {
-    background-color: #141414;
+    background-color: black;
+    box-shadow: 0 0 5px 5px #e5e5e5;
   }
   .nav-link {
     color: #E9E41E;
   }
   
   .menu {
-    background-color: #5B5B5B;
+    background-color: black;
   }
   
   .logo-image{
@@ -21,7 +25,7 @@ body {
   }
   
   .promo {
-    background-color: #141414;
+    background-color: black;
     padding: 25px;
   }
   
@@ -29,7 +33,7 @@ body {
     height: 400px;
     width: 100%;
     margin-bottom: 10px;
-  
+
   }
   
   .promo-text {
@@ -41,8 +45,8 @@ body {
   }
   
   .form {
-    border-style: solid;
-    border-color: #141414;
+    /*border-style: solid;
+    border-color: #141414; */
     margin: 0 auto 0 auto;
   }
   
@@ -53,15 +57,21 @@ body {
   .card{
     float: left;
   }
+  .btn-default {
+    background-color: #E9E41E;
+  }
+  .btn-default:hover {
+    box-shadow: 0 0 5px 5px #6F6BBE;
+  }
   .btn-link {
     margin: 15px;
     background-color: #E9E41E;
   }
   a {
-    color: #141414;
+    color:  #6F6BBE;
   }
   a:hover {
-    color: #6F6BBE;
+    color:  #E9E41E;
   }
 .toppings{
     margin: 0 auto 0 auto;
