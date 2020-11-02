@@ -73,18 +73,18 @@ module.exports = function(app) {
     db.Order.findAll({
       attributes: [
         sequelize.fn("MAX", sequelize.col("id"))
-     ],
-     where: {
-       saveById: req.users.id
-     }
+      ],
+      where: {
+        saveById: req.users.id
+      }
     }).then(function(newOrders){
       res.json(newOrders);
     });
   });
   app.post("/api/orders", function(req,res){
-    db.Order.create().then(function(dbOrders){
+    db.Order.create(req.body).then(function(dbOrders){
       res.json(dbOrders);
-    })
-  })
+    });
+  });
 };
 
