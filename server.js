@@ -1,7 +1,5 @@
-/* eslint-disable linebreak-style */
 const express = require("express");
 const session = require("express-session");
-// Requiring passport as we've configured it
 const passport = require("./config/passport");
 
 const PORT = process.env.PORT || 3000;
@@ -28,7 +26,6 @@ app.engine("handlebars", exphbs({
 );
 app.set("view engine", "handlebars");
 
-//app.use(routes);
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 

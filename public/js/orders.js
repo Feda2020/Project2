@@ -17,7 +17,6 @@ $(document).ready(function() {
 
   $(".submitOrder").on("click", function(event){
     event.preventDefault();
-    //let userId;
     $.get("/api/user_data").then(function(data) {
       let userId = data.id;
       let newOrder = {
