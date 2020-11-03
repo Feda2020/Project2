@@ -1,7 +1,7 @@
 $(document).ready(function() {
-  let meatToppings = ["Pepperoni", "Italian Sausage", "Bacon"];
-  let veggieToppings = ["Peppers", "Onions", "Black Olives"];
-  let extraCheese = ["Cheddar", "Colby", "Monterrey Jack"];
+  let meatToppings = ["Pepperoni", "Sausage", "Bacon", "Canadian Bacon", "Hamburger", "Brisket", "Steak"];
+  let veggieToppings = ["Peppers", "Onions", "Black Olives", "Green Olives", "Jalape&ntildeos"];
+  let extraCheese = ["Cheddar", "Colby", "Monterrey Jack", "Pepper Jack", "Mozzarella"];
 
   let meatButtons = $(".meats");
   let vegButtons = $(".veggies");
@@ -37,6 +37,37 @@ $(document).ready(function() {
 
   $(".add-pizza").on("click", function() {
     $("#checkOutModal").modal("show");
+    const name = $(this)[0].parentElement.children[0].textContent;
+    const firstTop = $(this)[0].parentElement.children[1].textContent;
+    const secondTop = $(this)[0].parentElement.children[2].textContent;
+    const thirdTop = $(this)[0].parentElement.children[3].textContent;
+    if(firstTop === "No Topping"){
+      $(".pizza-name").text(name);
+      $(".one").text("Plain cheese");
+    }else{
+      $(".pizza-name").text(name);
+      $(".one").text(firstTop);
+      $(".two").text(secondTop);
+      $(".three").text(thirdTop);
+    }
   });
 
+  $(".submitOrder").on("click", function(event){
+    event.preventDefault();
+    //let userId;
+    $.get("/api/user_data").then(function(data) {
+      let userId = data.id;
+      let newOrder = {
+        pizzaName: $(".pizza-name").text(),
+        toppingOne: $(".one").text(),
+        toppingTwo: $(".two").text(),
+        toppingThree: $(".three").text(),
+        saveById: userId
+      };
+      $.post("/api/orders", newOrder, function(){
+        window.location.replace("/checkout");
+      });
+    });
+
+  });
 });
