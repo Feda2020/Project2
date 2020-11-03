@@ -119,3 +119,28 @@ cursor: pointer;
 .createOwn:hover{
   cursor: pointer;
 }
+
+.about-card {
+  margin-bottom: 30px;
+}
+
+.about-header {
+  font-size: 45px;
+}
+
+.about {
+  background-color: blueviolet;
+  font-size: 25px;
+}
+
+.review-card {
+  margin-bottom: 15px;
+}
+
+.review {
+  background-color: darkmagenta;
+}
+
+.blockquote-footer {
+  color: goldenrod;
+}
