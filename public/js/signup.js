@@ -4,7 +4,7 @@ $(document).ready(function() {
   var emailInput = $("input#email-input");
   var passwordInput = $("input#password-input");
   function handleLoginErr() {
-    $("#alert .msg").text("You already have an account" );
+    $("#alert .msg").text("You already have an account");
     $("#alert").fadeIn(500);
   }
   function signUpUser(email, password) {

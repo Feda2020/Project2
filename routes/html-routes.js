@@ -2,7 +2,6 @@
 var db = require("../models");
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
-var sequelize = require("sequelize");
 
 module.exports = function(app) {
 
@@ -59,14 +58,6 @@ module.exports = function(app) {
   // });
 
   app.get("/checkout", isAuthenticated, function(req,res){
-    db.Order.max({
-      where: {
-        saveById: null
-      }
-    }).then(function(orders){
-      res.render("orders", {
-        orders: orders
-      });
-    });
+    res.render("checkout");
   });
 };
