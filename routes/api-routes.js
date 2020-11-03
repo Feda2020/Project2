@@ -58,17 +58,6 @@ module.exports = function(app) {
     });
   });
 
-  //FAVORITES
-  // app.get("/api/presetorders", function(req, res){
-  //   db.Order.findAll({
-  //     where: {
-  //       favorites: true
-  //     }
-  //   }).then(function(favOrders){
-  //     res.json(favOrders);
-  //   });
-  // });
-
   //CHECKOUT
   app.get("/api/presetorders", function(req, res){
     db.Order.findAll({
