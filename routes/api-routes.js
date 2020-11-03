@@ -86,5 +86,17 @@ module.exports = function(app) {
       res.json(dbOrders);
     });
   });
-};
 
+  app.get("/api/orders/:id", function(req, res){
+    db.Order.findAll({
+      where: {
+        saveById: req.params.id
+      },
+      order: [
+        ["id", "DESC"]
+      ]
+    }).then(function(previousOrders){
+      res.json(previousOrders);
+    });
+  });
+};
