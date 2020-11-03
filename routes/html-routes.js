@@ -60,4 +60,8 @@ module.exports = function(app) {
   app.get("/checkout", isAuthenticated, function(req,res){
     res.render("checkout");
   });
+
+  app.get("/about", function(req,res){
+    res.render("about");
+  });
 };
