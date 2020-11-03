@@ -3,8 +3,13 @@ $(document).ready(function() {
   var signUpForm = $("form.signup");
   var emailInput = $("input#email-input");
   var passwordInput = $("input#password-input");
+<<<<<<< HEAD
   function handleLoginErr(err) {
     $("#alert .msg").text("You already have an account" );
+=======
+  function handleLoginErr() {
+    $("#alert .msg").text("You already have an account");
+>>>>>>> master
     $("#alert").fadeIn(500);
     console.log(err.responseJSON);
   }

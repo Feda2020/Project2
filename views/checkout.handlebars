@@ -22,7 +22,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="logo-image">
-        <img src="img/logo.png" class="img-fluid" alt="restaurant logo">
+        <img src="img/logo-nobg.png" class="img-fluid" alt="restaurant logo">
       </div>
     </nav>
   </div>
@@ -30,21 +30,22 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3 form">
-        {{#each orders}}
-            <div class="card pizzaCard cardFloat" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">{{{pizzaName}}}</h5>
-                    <p class="card-text topOne">{{{toppingOne}}}</p>
-                    <p class="card-text topTwo">{{{toppingTwo}}}</p>
-                    <p class="card-text topThree">{{{toppingThree}}}</p>
-                    <h5>Your order ID is {{{id}}}</h5>
-                </div>
-            </div>
-        {{/each}}
+        <div class="card pizzaCard cardFloat" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title orderName"></h5>
+            <p class="card-text text-center firstTop"></p>
+            <p class="card-text text-center secondTop"></p>
+            <p class="card-text text-center thirdTop"></p>
+            <br>
+            <p class="card-text text-center orderId"></p>
+            <br>
+            <p class="card-text text-center">Your order will be ready in 20 minutes! Please come to our store with your prefered method of payment!</p>
+        </div>
+    </div>
       </div>
     </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/reviewOrder.js"></script>
+  <script type="text/javascript" src="js/checkout.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>

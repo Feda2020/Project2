@@ -25,7 +25,19 @@ module.exports = function(app) {
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/members", isAuthenticated, function(req, res) {
-    res.render("members");
+    db.Order.findAll({
+      where: {
+        saveById: req.user.id
+      },
+      order: [
+        ["id", "DESC"]
+      ],
+      limit: 5
+    }).then(function(orders){
+      res.render("members", {
+        orders: orders
+      });
+    });
   });
 
   app.get("/order", isAuthenticated, function(req,res){
@@ -58,15 +70,6 @@ module.exports = function(app) {
   // });
 
   app.get("/checkout", isAuthenticated, function(req,res){
-    db.Order.findAll({
-      attributes: [
-        sequelize.fn("MAX", sequelize.col("id"))
-      ],
-      where: {
-        saveById: req.users.id
-      }
-    }).then(function(){
-      res.render("checkout");
-    });
+    res.render("checkout");
   });
 };
