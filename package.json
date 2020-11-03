@@ -2,7 +2,7 @@
     "name": "project2",
     "version": "1.0.0",
     "description": "",
-    "main": "server.js",
+    "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "lint": "eslint \"**/*.js\" --quiet",
@@ -26,6 +26,7 @@
         "express": "^4.17.1",
         "express-handlebars": "^5.2.0",
         "express-session": "^1.17.1",
+        "mysql": "^2.18.1",
         "mysql2": "^2.2.5",
         "passport": "^0.4.1",
         "passport-local": "^1.0.0",
