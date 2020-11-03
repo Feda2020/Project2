@@ -45,10 +45,6 @@ module.exports = function(app) {
   app.get("/createorder", isAuthenticated, function(req,res){
     res.render("createOrder");
   });
-<<<<<<< HEAD
-=======
-
->>>>>>> master
 
   app.get("/checkout", isAuthenticated, function(req,res){
     res.render("checkout");
