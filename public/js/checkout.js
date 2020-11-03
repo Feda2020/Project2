@@ -7,7 +7,7 @@ $(document).ready(function() {
       $(".firstTop").text(dataTwo[0].toppingOne);
       $(".secondTop").text(dataTwo[0].toppingTwo);
       $(".thirdTop").text(dataTwo[0].toppingThree);
-      $(".orderId").text("Your order number is " + dataTwo[0].id);
+      $(".orderId").text(dataTwo[0].id);
 
     });
   });
