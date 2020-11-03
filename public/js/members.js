@@ -10,11 +10,10 @@ $(document).ready(function() {
       pizzaName: pizzaName,
       toppingOne: toppingOne,
       toppingTwo: toppingTwo,
-      toppingThree: toppingThree,
+      toppingThree: toppingThree
     })
-      .then(function() {
-        window.location.replace("/members");
-        // If there's an error, handle it by throwing up a bootstrap alert
+      .then(function(response) {
+       //add here
       });
   }
 
