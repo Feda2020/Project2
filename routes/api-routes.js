@@ -46,10 +46,7 @@ module.exports = function(app) {
     });
   });
 
-<<<<<<< HEAD
-=======
   //CHECKOUT
->>>>>>> master
   app.get("/api/presetorders", function(req, res){
     db.Order.findAll({
       attributes: [

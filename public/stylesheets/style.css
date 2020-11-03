@@ -66,6 +66,7 @@ form.login {
 .btn-link {
   margin: 15px;
   background-color: #E9E41E;
+  color: #141414;
 }
 a {
   color:  #6F6BBE;
@@ -143,4 +144,8 @@ cursor: pointer;
 
 .blockquote-footer {
   color: goldenrod;
+}
+
+.prevOrder{
+  text-align: center;
 }
