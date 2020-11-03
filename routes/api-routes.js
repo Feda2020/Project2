@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
+var sequelize = require("sequelize");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -81,6 +82,7 @@ module.exports = function(app) {
       res.json(newOrders);
     });
   });
+
   app.post("/api/orders", function(req,res){
     db.Order.create(req.body).then(function(dbOrders){
       res.json(dbOrders);
