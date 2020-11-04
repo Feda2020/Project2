@@ -23,15 +23,18 @@
 
 ## Usage
 
-  As a pizza lover I would like a restaurant application were I can safely save my email and password the be able to log in. I would also like to save my favoraite pizza and previous orders for fast ordering.
+  As a pizza lover I would like a restaurant application were I can safely login and save my email/ password. I would also like to save my previous orders for fast future ordering. I would also like to be able to chose my own toppings and have them saved for future orders as well.
 
 ## Application-walk-through
 
-![Functioning application]()
+![Application Walk Through](/public/img/pizzaClawWalkTrough.gif)
 
  ## Pictures
 
-![Functioning application]()
+![Functioning application](/public/img/pizzaClaw1.PNG)
+![Functioning application](/public/img/members.PNG)
+![Functioning application](/public/img/orders.PNG)
+![Functioning application](/public/img/clawYourOwn.PNG)
 
 ## Test
 
