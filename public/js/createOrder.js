@@ -1,6 +1,6 @@
 $(document).ready(function() {
   let meatToppings = ["Pepperoni", "Sausage", "Bacon", "Canadian Bacon", "Hamburger", "Brisket", "Steak"];
-  let veggieToppings = ["Peppers", "Onions", "Black Olives", "Green Olives", "Jalape&ntildeos"];
+  let veggieToppings = ["Peppers", "Onions", "Black Olives", "Green Olives", "Jalapeños"];
   let extraCheese = ["Cheddar", "Colby", "Monterrey Jack", "Pepper Jack", "Mozzarella"];
 
   let meatButtons = $(".meats");
